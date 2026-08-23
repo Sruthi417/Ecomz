@@ -19,8 +19,8 @@ const PRODUCTS = [
     title: "Rubber lounge armchair",
 
     images: [
-      "/Pro1.avif",
-      "/Pro1-hover.avif",
+      "/pro1.avif",
+      "/pro1-hover.avif",
     ],
 
     sellingPrice: 35.0,
@@ -38,8 +38,8 @@ const PRODUCTS = [
     title: "Nova Edge Sofa",
 
     images: [
-      "/Pro2.avif",
-      "/Pro2-hover.avif",
+      "/pro2.avif",
+      "/pro2-hover.avif",
     ],
 
     sellingPrice: 76.5,
@@ -57,8 +57,8 @@ const PRODUCTS = [
     title: "Lumen Arc Coffee Table",
 
     images: [
-      "/Pro3.avif",
-      "/Pro3-hover.avif",
+      "/pro3.avif",
+      "/pro3-hover.avif",
     ],
 
     sellingPrice: 70.8,
@@ -76,8 +76,8 @@ const PRODUCTS = [
     title: "Woodpeak Dining Set",
 
     images: [
-      "/Pro4.avif",
-      "/Pro4-hover.avif",
+      "/pro4.avif",
+      "/pro4-hover.avif",
     ],
 
     sellingPrice: 73.42,

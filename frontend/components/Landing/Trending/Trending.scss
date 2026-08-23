@@ -203,7 +203,7 @@
   .trending .trending__content p {
     font-size: 0.9rem;
     line-height: 1.45;
-    margin-top: -2rem;
+    // margin-top: 1rem;
   }
 
   .trending .trending__footer {
@@ -218,12 +218,13 @@
     width: auto;
     padding: 0.6rem 1.4rem;
     font-size: 0.85rem;
+    margin-top:4rem;
     
   }
 }
 @media (max-width: 580px) {
   .trending .trending__panel {
-    height: 600px;
+    height: 500px;
   }
 
   .trending .trending__layer {
@@ -240,13 +241,13 @@
   }
   .trending .trending__footer {
     
-    margin-top: auto;
+    margin-top: -2rem;
     
   }
 }
 @media (max-width: 400px) {
   .trending .trending__panel {
-    height: 550px;
+    height: 500px;
   }
   .trending .trending__footer {
     
