@@ -101,12 +101,12 @@ const ProductCard = ({ product }) => {
         <div className="furn-product-card__priceRow">
 
           <span className="furn-product-card__price">
-            {product.sellingPrice.toFixed(2)} USD
+            {product.sellingPrice} USD
           </span>
 
           {hasDiscount && (
             <span className="furn-product-card__comparePrice">
-              {product.comparePrice.toFixed(2)} USD
+              {product.comparePrice} USD
             </span>
           )}
 

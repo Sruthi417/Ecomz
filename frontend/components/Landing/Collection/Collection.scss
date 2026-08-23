@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&display=swap");
+
+.collection {
+  --section-x: clamp(1.5rem, 4vw, 5rem);
+  --section-y: clamp(4rem, 8vw, 6rem);
+  --grid-gap: clamp(1rem, 1.8vw, 1.6rem);
+  --radius: 18px;
+  --card-bg: #f5f5f3;
+  --text: #1d1d1f;
+
+  width: 100%;
+  background: #fff;
+  padding: var(--section-y) var(--section-x);
+  position: relative;
+  padding-top: 2rem;
+  z-index: 10;
+}
+
+.collection__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e5e5;
+  margin-bottom: 4rem;
+
+  .collection__eyebrow {
+    font-size: 0.95rem;
+    color: #444;
+    font-weight: 500;
+  }
+
+  .collection__allBtn {
+    background: white;
+    border: 1px solid #d7d7d7;
+    border-radius: 12px;
+    padding: 0.7rem 1.4rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #111;
+    text-decoration: none;
+
+    &:hover {
+      background: #111;
+      color: white;
+      border-color: #111;
+    }
+  }
+}
+
+.collection__tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-top: -0.5rem;
+  button {
+    background: none;
+    border: none;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(20px, 2.5vw, 24px);
+    font-weight: 500;
+    color: #a3a3a3;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0;
+
+    &.active {
+      color: #111;
+      font-weight: 500;
+    }
+
+    &:hover {
+      color: #111;
+    }
+  }
+}
+
+.collection__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+.collection__mainImage {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  border-radius: var(--radius);
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 0.5s ease;
+  }
+}
+
+.collection__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+/* ===================================
+            Product Card (Matches BS)
+=================================== */
+
+.collection__card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.collection__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 0.93;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+}
+
+.collection__addButton {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: #1d1d1f;
+  color: #fff;
+  cursor: pointer;
+  z-index: 20;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s ease;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+
+  svg {
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &:hover {
+    background: #000;
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.collection__card:hover .collection__addButton {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.collection__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 5%;
+  transition: opacity 0.65s cubic-bezier(0.23, 1, 0.32, 1), transform 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: opacity, transform;
+}
+
+.collection__image--primary {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.collection__image--secondary {
+  opacity: 0;
+  transform: scale(1.025);
+  z-index: 3;
+}
+
+.collection__card:hover .collection__image--primary {
+  opacity: 0;
+  transform: scale(0.985);
+}
+
+.collection__card:hover .collection__image--secondary {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.collection__content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.collection__name {
+  font-family: "Manrope", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.collection__priceRow {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.collection__price {
+  font-size: 14px;
+}
+
+.collection__comparePrice {
+  font-size: 14px;
+  color: #8d8d8d;
+  text-decoration: line-through;
+}
+
+/* ======================================================
+                    Responsive
+====================================================== */
+
+@media (max-width: 1200px) {
+  .collection__layout {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .collection__layout {
+    grid-template-columns: 1fr;
+  }
+  .collection__mainImage {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .collection {
+    --section-x: 1.25rem;
+    --section-y: 4rem;
+  }
+
+  .collection__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .collection__tabs {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .collection__grid {
+    grid-template-columns: 1fr;
+  }
+  .collection__name {
+    font-size: 1.3rem;
+  }
+  .collection__price {
+    font-size: 1rem;
+  }
+  .collection__comparePrice {
+    font-size: 0.95rem;
+  }
+  .collection__addButton {
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 10px;
+  }
+}

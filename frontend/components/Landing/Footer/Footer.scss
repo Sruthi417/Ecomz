@@ -1,0 +1,515 @@
+.fur-footer {
+  width: 100%;
+  background: #1f1f1f;
+  color: #f5f5f5;
+  padding: 3rem 5rem 4rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__container {
+    max-width: 1700px;
+    margin: 0 auto;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 8.5rem;
+  }
+
+  &__topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  &__left {
+    flex: 0 0 40%;
+
+    h2 {
+      font-size: clamp(28px, 5vw, 36px);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.05em;
+      max-width: 560px;
+      color: #f4f4f4;
+       margin-top: 4rem;
+       margin-left: -4rem;
+    }
+
+    .fur-footer__muted {
+      color: #f4f4f4;
+     
+    }
+  }
+
+  &__logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 4rem;
+    margin-right: -4rem;
+
+    img {
+      width: min(800px, 100%);
+      height: auto;
+      object-fit: contain;
+      user-select: none;
+    }
+  }
+
+  &__bottomRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-inline: -4rem;
+    margin-top: -4rem;
+
+  }
+
+  &__newsletter {
+   min-width: 450px;
+   max-width: 450px;
+   width: 100%;
+
+  }
+  &__labels{
+     display: block;
+     margin-bottom: 1rem;
+  }
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+   
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    height: 52px;
+    background: transparent;
+    border: none;
+
+    input {
+      flex: 1;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+      background: #fff;
+      color: #111;
+      font-size: .95rem;
+      padding: 0 1.25rem;
+      font-family: inherit;
+
+      &::placeholder {
+        color: #8a8a8a;
+      }
+    }
+
+    button {
+      width: 130px;
+      height: 100%;
+      border: 1px solid rgba(255,255,255,.95);
+      border-radius: 8px;
+      cursor: pointer;
+      background: #1f1f1f;
+      color: #fff;
+      font-size: .95rem;
+      font-weight: 500;
+      transition: .35s ease;
+
+      &:hover {
+        background: #fff;
+        color: #111;
+      }
+    }
+  }
+
+  &__policies {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    min-width: 250px;
+    margin-top: -3rem;
+    
+
+    a {
+      color: rgba(255, 255, 255, 0.82);
+      transition: color 0.3s ease;
+      font-size: 14px;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__divider {
+ 
+    width: 1270px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    margin: 2rem 0;
+  }
+
+  &__middle {
+    display: grid;
+    grid-template-columns: 1.2fr repeat(3, 1fr);
+    gap: 4rem;
+
+    .fur-footer__label {
+      margin-left: -1.1rem;
+    }
+
+    .fur-footer__labels {
+      margin-left: -4rem;
+      font-size: 14px;
+    }
+  }
+
+  &__pages {
+    nav {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-left: -3rem;
+      margin-top: 20px;
+
+      a {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.82);
+        transition: color 0.3s;
+        
+        margin-left: -15px;
+       
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__store {
+    .fur-footer__address {
+      margin-top: 0.5rem;
+
+      p {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.82);
+        margin-bottom: 0.35rem;
+        line-height: 1.6;
+        margin-left: -15px;
+        
+      }
+
+      a {
+        font-size: 13px;
+        display: inline-block;
+        margin-top: 1rem;
+        color: #fff;
+        margin-left: -15px;
+      }
+    }
+  }
+}
+.fur-footer {
+  &__bottom {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-left: -4rem;
+
+    span {
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: -4rem;
+
+    a {
+      width: 40px;
+      height: 40px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 14px;
+
+      border: 1px solid rgba(255, 255, 255, 0.15);
+
+      color: #fff;
+
+      font-size: 1.3rem;
+
+      transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease,
+        border-color 0.35s ease;
+
+      &:hover {
+        background: #fff;
+        color: #111;
+        border-color: #fff;
+        transform: translateY(-4px);
+      }
+    }
+  }
+}
+
+/* The -4rem negative margins below create a "bleed" past the 1700px container.
+   That only fits when the viewport is wide enough to have gutters (~1830px+).
+   Below that the container fills the viewport, so the bleed pushes real content
+   off both edges. Neutralise the HORIZONTAL negatives early (layout untouched). */
+@media (max-width: 1830px) {
+  .fur-footer {
+    &__left h2 {
+      margin-left: 0;
+    }
+
+    &__logo {
+      margin-right: 0;
+    }
+
+    &__bottomRow {
+      margin-inline: 0;
+    }
+
+    &__divider {
+      width: 100%;
+    }
+
+    &__middle {
+      .fur-footer__labels {
+        margin-left: 0;
+      }
+
+      .fur-footer__label {
+        margin-left: 0;
+      }
+    }
+
+    &__pages nav {
+      margin-left: 0;
+
+      a {
+        margin-left: 0;
+      }
+    }
+
+    &__store .fur-footer__address {
+      p {
+        margin-left: 0;
+      }
+
+      a {
+        margin-left: 0;
+      }
+    }
+
+    &__copyright {
+      margin-left: 0;
+    }
+
+    &__socials {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .fur-footer {
+    &__top {
+      gap: 4rem;
+    }
+
+    &__topRow {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    &__left {
+      flex: 1 1 auto;
+
+      h2 {
+        margin-top: 0;
+        margin-left: 0;
+      }
+    }
+
+    &__logo {
+      justify-content: flex-start;
+      margin-top: 0;
+      margin-right: 0;
+
+      img {
+        width: min(560px, 100%);
+      }
+    }
+
+    &__bottomRow {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.5rem;
+      margin-inline: 0;
+      margin-top: 0;
+    }
+
+    &__policies {
+      align-items: flex-start;
+      margin-top: 0;
+    }
+
+    &__divider {
+      width: 100%;
+    }
+
+    &__middle {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+
+      .fur-footer__labels {
+        margin-left: 0;
+      }
+
+      .fur-footer__label {
+        margin-left: 0;
+      }
+    }
+
+    &__pages nav {
+      margin-left: 0;
+
+      a {
+        margin-left: 0;
+      }
+    }
+
+    &__store .fur-footer__address {
+      p {
+        margin-left: 0;
+      }
+
+      a {
+        margin-left: 0;
+      }
+    }
+
+    &__copyright {
+      margin-left: 0;
+    }
+
+    &__socials {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .fur-footer {
+    padding: 4rem 1.25rem 2rem;
+
+    &__top {
+      gap: 3rem;
+    }
+
+    &__left {
+      h2 {
+        font-size: clamp(2rem, 8vw, 3rem);
+      }
+    }
+
+    &__newsletter {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    &__form {
+      flex-direction: column;
+      height: auto;
+
+      input {
+        width: 100%;
+        height: 60px;
+        flex: none;
+      }
+
+      button {
+        width: 100%;
+        height: 60px;
+        flex: none;
+      }
+    }
+
+    &__middle {
+      grid-template-columns: 1fr;
+      gap: 2.8rem;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.75rem;
+    }
+
+    &__socials {
+      a {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .fur-footer {
+    &__logo img {
+      width: 100%;
+    }
+
+    &__copyright {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    &__socials {
+      gap: 0.75rem;
+
+      a {
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,416 @@
+.instagramFeed {
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  padding: 3.5rem clamp(1.5rem, 4vw, 4rem) 4rem;
+
+  &__top {
+    margin: 0 auto;
+    max-width: 1700px;
+    margin-bottom: 5rem;
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background: #d9d9d9;
+    margin-bottom: 1.2rem;
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    font-size: .95rem;
+    color: #202020;
+    font-weight: 500;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: clamp(30px, 5vw, 40px);
+    font-weight: 500;
+    letter-spacing: -.04em;
+    color: #161616;
+    margin-bottom: 0.1rem;
+    margin-top: -1.5rem;
+  }
+
+  &__gallery {
+    position: relative;
+    max-width: 1450px;
+    margin: 0 auto;
+
+    height: 760px;
+ margin-top: -2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.instagramCard {
+  position: absolute;
+
+  width: 500px;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 18px 60px rgba(0,0,0,.10);
+
+  transition:
+    transform .45s cubic-bezier(.22,1,.36,1),
+    box-shadow .45s;
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+
+    img {
+      object-fit: cover;
+      transition:
+        transform .8s ease;
+    }
+  }
+
+  &:hover {
+
+    // box-shadow:
+    //   0 35px 80px rgba(0,0,0,.16);
+
+   
+  }
+
+  &__badge{
+    position:absolute;
+
+    top:1.2rem;
+    left:1.2rem;
+
+    width:35px;
+    height:35px;
+
+    border-radius:6px;
+
+    background:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#111;
+
+    text-decoration:none;
+
+    box-shadow:
+      0 12px 30px rgba(0,0,0,.12);
+
+    transition:
+      transform .35s,
+      background .35s,
+      color .35s;
+
+  
+  }
+
+  &.center{
+    z-index:5;
+    width:520px;
+    aspect-ratio: 4.3/5;
+    background: #fff;
+    padding: .5rem;
+    transform:translateY(-10px);
+  }
+
+  &.left{
+    left:4%;
+    width: 460px;
+    aspect-ratio: 1/1;
+    transform:
+      rotate(-12deg)
+      translateY(60px);
+    z-index:2;
+  }
+
+  &.right{
+    right:4%;
+    width: 460px;
+    aspect-ratio: 1/1;
+    transform:
+      rotate(12deg)
+      translateY(60px);
+    z-index:2;
+
+    .instagramCard__badge {
+      left: auto;
+      right: 1rem;
+    }
+  }
+
+  &.left:hover{
+
+    transform:
+      rotate(-12deg)
+      translateY(45px)
+      scale(1.03);
+
+  }
+
+  &.center:hover{
+
+    transform:
+      translateY(-18px)
+      scale(1.02);
+
+  }
+
+  &.right:hover{
+
+    transform:
+      rotate(12deg)
+      translateY(45px)
+      scale(1.03);
+
+  }
+}
+@media (max-width: 1400px) {
+
+  .instagramFeed {
+
+    &__gallery {
+      height: 670px;
+    }
+
+  }
+
+  .instagramCard {
+
+    width: 430px;
+
+    &.center {
+      width: 500px;
+    }
+
+    &.left {
+      left: 2%;
+    }
+
+    &.right {
+      right: 2%;
+    }
+
+  }
+
+}
+
+@media (max-width: 1100px) {
+
+  .instagramFeed {
+
+    padding: 6rem 1.5rem 7rem;
+
+    &__top {
+      margin-bottom: 4rem;
+    }
+
+    &__title {
+      margin-bottom: 3.5rem;
+    }
+
+    &__gallery {
+      height: 620px;
+    }
+
+  }
+
+  .instagramCard {
+
+    width: min(46vw, 360px);
+
+    &.center {
+      width: min(56vw, 420px);
+      transform: translateY(-10px) !important;
+    }
+
+    &.left {
+      left: 3%;
+      width: min(46vw, 360px);
+      transform: rotate(-11deg) translateY(45px) !important;
+    }
+
+    &.right {
+      right: 3%;
+      width: min(46vw, 360px);
+      transform: rotate(11deg) translateY(45px) !important;
+    }
+
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .instagramFeed {
+
+    padding: 5rem 1.2rem 6rem;
+
+    &__top {
+      margin-bottom: 3rem;
+    }
+
+    &__title {
+      font-size: clamp(2.3rem, 9vw, 3.4rem);
+      margin-bottom: 2.5rem;
+    }
+
+    &__gallery {
+      height: 460px;
+    }
+
+  }
+
+  .instagramCard {
+
+    border-radius: 16px;
+    padding: .4rem;
+
+    &__image {
+      border-radius: 12px;
+    }
+
+    &__badge {
+      top: .9rem;
+      left: .9rem;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &.center {
+      width: min(58vw, 300px);
+      transform: translateY(-8px) !important;
+    }
+
+    &.left {
+      left: 2%;
+      width: min(47vw, 240px);
+      transform: rotate(-10deg) translateY(34px) !important;
+    }
+
+    &.right {
+      right: 2%;
+      width: min(47vw, 240px);
+      transform: rotate(10deg) translateY(34px) !important;
+
+      .instagramCard__badge {
+        left: auto;
+        right: .9rem;
+      }
+    }
+
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .instagramFeed {
+
+    padding: 4rem 1rem 5rem;
+
+    &__eyebrow {
+      font-size: .85rem;
+    }
+
+    &__gallery {
+      height: 380px;
+    }
+
+  }
+
+  .instagramCard {
+
+    border-radius: 14px;
+
+    &__badge {
+      top: .6rem;
+      left: .6rem;
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &.center {
+      width: min(60vw, 220px);
+      transform: translateY(-6px) !important;
+    }
+
+    &.left {
+      left: 2%;
+      width: min(46vw, 165px);
+      transform: rotate(-9deg) translateY(26px) !important;
+    }
+
+    &.right {
+      right: 2%;
+      width: min(46vw, 165px);
+      transform: rotate(9deg) translateY(26px) !important;
+
+      .instagramCard__badge {
+        left: auto;
+        right: .6rem;
+      }
+    }
+
+  }
+
+}
+
+@media (max-width: 350px) {
+
+  .instagramFeed {
+
+    &__gallery {
+      height: 340px;
+    }
+
+  }
+
+  .instagramCard {
+
+    &.center {
+      width: 62vw;
+      transform: translateY(-5px) !important;
+    }
+
+    &.left {
+      left: 1%;
+      width: 46vw;
+      transform: rotate(-8deg) translateY(22px) !important;
+    }
+
+    &.right {
+      right: 1%;
+      width: 46vw;
+      transform: rotate(8deg) translateY(22px) !important;
+    }
+
+  }
+
+}
