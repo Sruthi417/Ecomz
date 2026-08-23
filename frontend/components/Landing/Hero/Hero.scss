@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #d9d2cb;
+
+
+/* =====================================================
+   Background
+===================================================== */
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bg-slide {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bg-image {
+  object-fit: cover;
+  object-position: center;
+  user-select: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.34) 0%,
+      rgba(0,0,0,.16) 30%,
+      rgba(0,0,0,.02) 60%,
+      rgba(0,0,0,.05) 100%
+    );
+
+  z-index: 1;
+}
+
+/* =====================================================
+   Main Container
+===================================================== */
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  min-height: 100vh;
+
+  // padding-inline: clamp(15px,4vw,20px);
+
+  display: flex;
+  align-items: center;
+}
+
+/* =====================================================
+   Content
+===================================================== */
+
+.hero-content {
+  max-width: 560px;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 3.5rem;
+  align-items: flex-start;
+  transform: translateY(-2rem);
+}
+
+.hero-title {
+
+  margin: 0;
+
+  font-family: "Inter", sans-serif;
+
+  // font-size: clamp(25px, 5vw, 64px);
+font-size: 64px;
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.04em;
+
+  color: #fff;
+
+  text-wrap: balance;
+}
+
+.hero-description {
+
+  max-width: 470px;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+
+  color: rgba(255,255,255,.94);
+}
+
+/* =====================================================
+   Button
+===================================================== */
+
+.hero-button{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+margin-top:20px;
+
+width:120px;
+
+height:40px;
+
+border-radius:12px;
+
+background:#fff;
+
+text-decoration:none;
+
+font-family:"Inter",sans-serif;
+
+font-size:16px;
+
+font-weight:500;
+
+color:#111;
+
+transition:.35s cubic-bezier(.22,1,.36,1);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+}
+
+.hero-button:hover{
+
+transform:translateY(-3px);
+
+background:#f7f7f7;
+
+box-shadow:
+0 18px 40px rgba(0,0,0,.14);
+
+}
+
+/* =====================================================
+   Preview Images
+===================================================== */
+
+.hero-preview{
+
+position:absolute;
+
+right:48px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+z-index:5;
+
+display:flex;
+
+flex-direction:column;
+
+gap:16px;
+
+}
+
+.hero-thumb{
+
+position:relative;
+
+width:170px;
+
+height:118px;
+
+overflow:hidden;
+
+border-radius:14px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(16px);
+
+-webkit-backdrop-filter:blur(16px);
+
+border:1px solid rgba(255,255,255,.28);
+
+box-shadow:
+
+0 14px 40px rgba(0,0,0,.12);
+
+opacity:.45;
+
+transition:.45s cubic-bezier(.22,1,.36,1);
+
+cursor: pointer;
+
+}
+
+.hero-thumb.active{
+
+opacity:1;
+
+transform:scale(1.02);
+
+}
+
+.hero-thumb-image{
+
+object-fit:cover;
+
+object-position:center;
+
+transition:1.2s cubic-bezier(.22,1,.36,1);
+
+}
+
+}
+/* =====================================================
+   Large Desktop
+===================================================== */
+
+@media (max-width: 1400px) {
+
+  .hero-container{
+    padding-inline:56px;
+  }
+
+  .hero-title{
+    font-size:5.8rem;
+  }
+
+  .hero-preview{
+    right:40px;
+  }
+
+}
+
+/* =====================================================
+   Laptop
+===================================================== */
+
+@media (max-width:1200px){
+
+.hero-container{
+
+padding-inline:42px;
+
+}
+
+.hero-title{
+
+font-size:5rem;
+
+max-width:520px;
+
+}
+
+.hero-description{
+
+font-size:18px;
+
+max-width:430px;
+
+}
+
+.hero-preview{
+
+right:32px;
+
+}
+
+.hero-thumb{
+
+width:150px;
+
+height:104px;
+
+}
+
+}
+
+/* =====================================================
+   Tablet
+===================================================== */
+
+@media (max-width:992px){
+
+.hero{
+
+min-height:92vh;
+
+}
+
+.hero-container{
+
+align-items:flex-end;
+
+padding:120px 32px 80px;
+
+}
+
+.hero-content{
+
+max-width:100%;
+
+}
+
+.hero-title{
+
+font-size:4.3rem;
+
+max-width:520px;
+
+}
+
+.hero-description{
+
+font-size:17px;
+
+max-width:480px;
+
+}
+
+
+
+.hero-preview{
+
+right:28px;
+
+bottom:42px;
+
+top:auto;
+
+transform:none;
+
+}
+
+.hero-thumb{
+
+width:130px;
+
+height:90px;
+
+}
+
+}
+
+/* =====================================================
+   Mobile
+===================================================== */
+
+@media (max-width:768px){
+
+.hero{
+
+min-height:88vh;
+
+}
+
+.hero-overlay{
+
+background:
+linear-gradient(
+180deg,
+rgba(0,0,0,.28) 0%,
+rgba(0,0,0,.16) 35%,
+rgba(0,0,0,.45) 100%
+);
+
+}
+
+.hero-container{
+
+padding:110px 22px 160px;
+
+align-items:flex-end;
+
+}
+
+.hero-content{
+
+max-width:100%;
+
+}
+
+.hero-title{
+
+font-size:4rem;
+
+line-height:.95;
+
+letter-spacing:-.06em;
+
+max-width:420px;
+
+}
+
+.hero-description{
+
+font-size:15px;
+
+line-height:1.7;
+
+max-width:330px;
+
+}
+
+
+
+.hero .hero-preview{
+
+left:22px;
+
+right:auto;
+
+bottom:32px;
+
+top:auto;
+
+transform:none !important;
+
+flex-direction:row;
+
+gap:12px;
+
+}
+
+.hero .hero-thumb{
+
+width:130px;
+
+height:85px;
+
+border-radius:10px;
+
+opacity:1;
+
+transition:none;
+
+}
+
+.hero .hero-thumb.active{
+
+transform:none;
+
+}
+
+}
+
+/* =====================================================
+   Small Mobile
+===================================================== */
+
+@media (max-width:480px){
+  .hero{
+
+.hero-container{
+
+padding:100px 18px 150px;
+
+}
+
+.hero-title{
+
+font-size:45px;
+
+max-width:400px;
+
+}
+
+.hero-description{
+
+font-size:14px;
+
+max-width:290px;
+
+}
+
+
+
+.hero .hero-preview{
+
+left:18px;
+
+right:auto;
+
+bottom:24px;
+
+}
+
+.hero .hero-thumb{
+
+width:110px;
+
+height:72px;
+
+}
+
+}}

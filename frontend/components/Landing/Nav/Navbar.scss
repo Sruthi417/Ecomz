@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+.navbar-new {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 1.5rem;
+ 
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+/* ======================================================
+   Main Container
+====================================================== */
+
+.navbar-inner {
+  position: relative;
+
+ width: 1400px;
+  height: 55px;
+
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  /* Make sure links are clickable even though container is pointer-events: none */
+  pointer-events: auto;
+
+  border: 1px solid rgba(255, 255, 255, 0.378);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.678);
+
+  border-radius: 12px;
+
+  transition: .35s ease;
+}
+
+
+/* ======================================================
+   Mobile Menu Button
+====================================================== */
+
+.navbar-mobile-menu {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  transition: .35s ease;
+}
+
+.navbar-mobile-menu:hover {
+  background: rgba(255, 255, 255, .45);
+}
+
+/* ======================================================
+   Logo
+====================================================== */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -.045em;
+  color: #202020;
+  transition: .35s ease;
+ 
+ 
+  
+}
+
+/* ======================================================
+   Navigation
+====================================================== */
+
+.navbar-links {
+
+  display: flex;
+  align-items: center;
+
+  gap: 44px;
+}
+
+.navbar-link {
+
+  position: relative;
+
+  text-decoration: none;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  color: #2c2c2c;
+
+  transition: .35s ease;
+}
+
+.navbar-link:hover {
+
+  opacity: .6;
+
+}
+
+.navbar-link::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0%;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: #222;
+
+  transition: .35s ease;
+}
+
+.navbar-link:hover::after {
+
+  width: 100%;
+
+}
+
+/* ======================================================
+   Actions
+====================================================== */
+
+.navbar-actions {
+
+  display: flex;
+  align-items: center;
+
+  gap: 1px;
+}
+
+.navbar-cart {
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border: none;
+ 
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  color: #222;
+
+  transition: .35s ease;
+}
+
+.navbar-cart:hover {
+
+  background: rgba(255, 255, 255, .45);
+
+}
+
+.navbar-count {
+
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(0, 0, 0, .18);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  color: #222;
+
+  background: rgba(255, 255, 255, .45);
+
+  backdrop-filter: blur(8px);
+}
+
+/* ======================================================
+   Hover
+====================================================== */
+
+.navbar-inner:hover {
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, .08);
+
+}
+
+/* ======================================================
+   Large Desktop
+====================================================== */
+
+@media (max-width: 1440px) {
+
+  .navbar-inner {
+    width: min(94%, 1400px);
+  }
+
+}
+
+/* ======================================================
+   Laptop
+====================================================== */
+
+@media (max-width: 1200px) {
+
+  .navbar-inner {
+    height: 60px;
+    padding: 0 22px;
+  }
+
+  .navbar-logo {
+    font-size: 30px;
+  }
+
+  .navbar-links {
+    gap: 36px;
+  }
+
+  .navbar-link {
+    font-size: 15px;
+  }
+
+}
+
+/* ======================================================
+   Tablet
+====================================================== */
+
+@media (max-width: 992px) {
+
+  .navbar-new {
+    top: 0px;
+  }
+
+  .navbar-inner {
+
+    width: calc(100% - 32px);
+
+    height: 58px;
+
+    padding: 0 20px;
+  }
+
+  .navbar-logo {
+    font-size: 28px;
+  }
+
+  .navbar-links {
+    gap: 26px;
+  }
+
+  .navbar-link {
+    font-size: 15px;
+  }
+
+}
+
+/* ======================================================
+   Mobile
+====================================================== */
+
+@media (max-width: 768px) {
+
+  .navbar-new {
+    top: 0px;
+  }
+
+  .navbar-inner {
+
+    width: calc(100% - 20px);
+
+    height: 56px;
+
+    padding: 0 18px;
+  }
+
+  .navbar-mobile-menu {
+    display: flex;
+  }
+
+  .navbar-logo {
+    font-size: 26px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .navbar-logo img {
+    width: 75px !important;
+    height: auto !important;
+  }
+
+  /* Hide desktop navigation.
+     We'll replace this with a hamburger later. */
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-actions {
+    gap: 8px;
+  }
+
+  .navbar-cart {
+    width: 38px;
+    height: 38px;
+  }
+
+  .navbar-count {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+
+}
+
+/* ======================================================
+   Small Mobile
+====================================================== */
+
+@media (max-width: 480px) {
+
+  .navbar-inner {
+
+    height: 52px;
+
+    padding: 0 16px;
+  }
+
+  .navbar-logo {
+    font-size: 24px;
+  }
+
+  .navbar-cart {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navbar-count {
+
+    width: 24px;
+    height: 24px;
+
+    font-size: 12px;
+  }
+
+}
+
